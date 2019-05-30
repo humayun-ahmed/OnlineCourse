@@ -1,0 +1,32 @@
+<h1>Course Details</h1>
+
+<div class='register-form-container'>
+  <form (ngSubmit)="onSubmit()" #courseSaveForm="ngForm">
+    <div class="form-group row">
+      <label for="name" class="col-sm-2 col-form-label">Course Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="name" placeholder="Enter course name"
+               [(ngModel)]="course.name" name="name" required>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="maxParticipants" class="col-sm-2 col-form-label">Max Participants</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="maxParticipants" placeholder="Enter Max Participants"
+               [(ngModel)]="course.maxParticipants" name="maxParticipants" required>
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="teacher" class="col-sm-2 col-form-label">Teacher</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="teacher" placeholder="Enter Teacher Name"
+               [(ngModel)]="course.teacher" name="teacher" required>
+      </div>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary" [disabled]="!courseSaveForm.form.valid ">
+      Save Course</button>
+  </form>
+</div>

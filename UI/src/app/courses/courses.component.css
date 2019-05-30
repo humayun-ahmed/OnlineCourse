@@ -1,0 +1,28 @@
+.course-card{
+  margin-bottom: 5px;
+}
+.edit-btn{
+  margin-right: 5px;
+  width: 80px;
+  padding: 0px;
+}
+.delete-btn{
+  margin-right: 5px;
+  width: 100px;
+  padding: 0px;
+}
+.form-control-borderless {
+  border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+.news-search-area{
+  margin-bottom: 16px;
+}
+.search-card-body{
+  padding: 0px!important;
+}

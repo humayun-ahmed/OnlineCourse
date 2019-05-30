@@ -1,0 +1,48 @@
+
+<div class="news-search-area">
+  <div class="row justify-content-center">
+    <div>
+      <button (click)="exportAsXLSX()">
+        <i class="fa fa-file-excel-o" style="font-size:48px;color:blue"></i>
+      </button>
+    </div>
+    <div class="col-12 col-md-10 col-lg-8">
+      <div class="card card-sm">
+        <div class="card-body row no-gutters align-items-center search-card-body">
+          <!--<div class="col-auto">-->
+            <!--<i class="fas fa-search h4 text-body"></i>-->
+          <!--</div>-->
+          <!--end of col-->
+          <div class="col">
+            <input class="form-control form-control-lg form-control-borderless" type="search" (keyup.enter)="loadData(1)" [(ngModel)]="searchKey" placeholder="Search course">
+          </div>
+          <!--end of col-->
+          <div class="col-auto">
+            <button class="btn btn-lg btn-success" (click)="loadData(1)">Search</button>
+          </div>
+          <!--end of col-->
+        </div>
+      </div>
+    </div>
+    <!--end of col-->
+  </div>
+</div>
+
+
+<div>
+  <div class="card d-flex flex-row course-card" *ngFor="let course of courses">
+
+    <div class="card-body">
+      <h5 class="card-title">{{course.name}}</h5>
+      <p class="card-text">Max Participants: {{course.maxParticipants}}</p>
+      <p class="card-text">Teacher: {{course.teacher}}</p>
+      <h6 class="card-subtitle mb-2 text-muted small">Last update on {{course.lastUpdated | date: 'd MMMM, y'}}</h6>
+      <a class="btn btn-success edit-btn" routerLink="/course/{{course.courseGuid}}">Edit</a>
+      <a href="javascript:void(0)" class="btn btn-danger delete-btn" (click)="deleteCourse(course)">Delete</a>
+
+    </div>
+
+  </div>
+  <ngb-pagination [collectionSize]="totalItems" [pageSize]="itemsPerPage" [(page)]="page" [maxSize]="7" [rotate]="true" (pageChange)="loadData($event)"></ngb-pagination>
+</div>
+
