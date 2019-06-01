@@ -68,5 +68,16 @@ export class CoursesComponent implements OnInit {
       });
     }
   }
+  signupCourse(course : Course){
+    this.courseService.deleteCourse(course.courseGuid)
+      .pipe(finalize(() => {
+        })
+      ).subscribe((res : any) => {
+      this.loadData(1);
+      this.toastrService.success('Course deleted', 'Success!');
+    }, error => {
+      this.toastrService.error('Error. Try again!!', 'Oops!');
+    });
+  }
 
 }

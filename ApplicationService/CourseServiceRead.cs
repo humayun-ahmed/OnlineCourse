@@ -29,22 +29,23 @@ namespace OnlineCourse.ApplicationService
 
         public async Task<DynamicQueryView<CourseView>> Get(CourseQueryRequest request)
         {
-            List<CourseView> CourseViews=new List<CourseView>();
-            var Courses=this.repositoryReadOnlineCourse.Get<Course>();
+            List<CourseView> courseViews=new List<CourseView>();
+            var courses = this.repositoryReadOnlineCourse.Get<Course>().Include(x => x.Participants);
             if (!string.IsNullOrEmpty(request.Name))
             {
-                Courses = Courses.Where(x => x.Name.Contains(request.Name));
+                courses = courses.Where(x => x.Name.Contains(request.Name));
             }
 
             request.Sort = new List<SortDescriptor>();
             request.Sort.Add(new SortDescriptor { Field = "LastUpdated", Dir = "desc" });
-            var data = request.GetData(Courses, null);
-            foreach (var Course in data.Data.ToList())
+            var data = request.GetData(courses, null);
+            foreach (var course in data.Data.ToList())
             {
-                CourseViews.Add(AutoMapper.Mapper.Map<Course, CourseView>(Course));
+	            var courseView = AutoMapper.Mapper.Map<Course, CourseView>(course);
+				courseViews.Add(courseView);
             }
             DynamicQueryView<CourseView> dynamicQueryView = new DynamicQueryView<CourseView>();
-            dynamicQueryView.Data = CourseViews;
+            dynamicQueryView.Data = courseViews;
             dynamicQueryView.Total = data.Total;
             return dynamicQueryView;
         }
@@ -73,16 +74,16 @@ namespace OnlineCourse.ApplicationService
 
         public async Task<CourseView> GetById(Guid id)
         {
-            var Course =await this.repositoryReadOnlineCourse.Get<Course>(x=>x.CourseGuid==id).SingleOrDefaultAsync();
+            var course =await this.repositoryReadOnlineCourse.Get<Course>(x=>x.CourseGuid==id).Include(x=>x.Participants).SingleOrDefaultAsync();
            
-            if (Course == null)
+            if (course == null)
             {
                 var error = $"Course doesn't exist.";
                 throw this.dependencyResolver.Resolve<InvalidInputException>().GetException(error);
             }
 
-            var CourseView = AutoMapper.Mapper.Map<Course, CourseView>(Course);
-            return CourseView;
+            var courseView = AutoMapper.Mapper.Map<Course, CourseView>(course);
+            return courseView;
         }
     }
 }

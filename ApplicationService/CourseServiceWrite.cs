@@ -39,8 +39,29 @@ namespace OnlineCourse.ApplicationService
             var courseView = AutoMapper.Mapper.Map<Course, CourseView>(course);
             return courseView;
         }
+        public async Task Signup(SignupCourseCommand command)
+        {
+	        var existingCourse = await this.repositoryOnlineCourse.Get<Course>(x => x.CourseGuid == command.CourseGuid).Include(x=>x.Participants).FirstOrDefaultAsync();
+	        if (existingCourse == null)
+	        {
+		        var error = $"Course doesn't exist.";
+		        throw this.dependencyResolver.Resolve<InvalidInputException>().GetException(error);
+	        }
 
-        public async Task<CourseView> Edit(EditCourseCommand command)
+	        if (existingCourse.Participants.Count == existingCourse.MaxParticipants)
+	        {
+		        var error = $"Course participants full.";
+		        throw this.dependencyResolver.Resolve<InvalidInputException>().GetException(error);
+			}
+
+	        Participant participant = AutoMapper.Mapper.Map<SignupCourseCommand, Participant>(command);
+	        participant.CourseId = existingCourse.CourseId;
+
+			this.repositoryOnlineCourse.Insert(participant);
+	        await this.repositoryOnlineCourse.SaveChangesAsync();
+        }
+
+		public async Task<CourseView> Edit(EditCourseCommand command)
         {
             var existingCourse = await this.repositoryOnlineCourse.Get<Course>(x => x.CourseGuid == command.CourseGuid).SingleOrDefaultAsync();
             if (existingCourse == null)

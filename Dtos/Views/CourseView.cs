@@ -29,6 +29,11 @@ namespace OnlineCourse.Api.Dtos.Views
 		public int MaxParticipants { get; set; }
 
 		/// <summary>
+		/// gets or sets TotalParticipants
+		/// </summary>
+		public int TotalParticipants { get; set; }
+
+		/// <summary>
 		/// gets or sets Teacher
 		/// </summary>
 		public string Teacher { get; set; }

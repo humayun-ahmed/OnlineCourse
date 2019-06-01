@@ -1,0 +1,26 @@
+<h1>Signup</h1>
+
+<div class='register-form-container'>
+  <form (ngSubmit)="onSubmit()" #courseSaveForm="ngForm">
+    <div class="card-body">
+      <h5 class="card-title">Course Name:</h5><h5 class="card-title">{{this.course.name}}</h5>
+    </div>
+    <div class="form-group row">
+      <label for="name" class="col-sm-2 col-form-label">Student Name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="name" placeholder="Enter course name"
+               [(ngModel)]="participant.name" name="name" required>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="participantAge" class="col-sm-2 col-form-label">Student Age</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="participantAge" placeholder="Enter Age"
+               [(ngModel)]="participant.age" name="participantAge" required>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [style.visibility]="course.maxParticipants===course.totalParticipants?'hidden':''" [disabled]="!courseSaveForm.form.valid ">
+      Signup</button><a class="btn btn-success edit-btn"   routerLink="/">Close</a>
+  </form>
+</div>

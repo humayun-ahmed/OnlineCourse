@@ -45,9 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RemoveProductCommandSpecification.cs" />
-    <Compile Include="EditProductCommandSpecification.cs" />
-    <Compile Include="AddProductCommandSpecification.cs" />
+    <Compile Include="SignupCourseCommandSpecification.cs" />
+    <Compile Include="RemoveCourseCommandSpecification.cs" />
+    <Compile Include="EditCourseCommandSpecification.cs" />
+    <Compile Include="AddCourseCommandSpecification.cs" />
     <Compile Include="ConstantValues.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

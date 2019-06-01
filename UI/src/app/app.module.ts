@@ -12,13 +12,15 @@ import {NgbModule, NgbPaginationModule} from "@ng-bootstrap/ng-bootstrap";
 import {CommonModule} from "@angular/common";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ToastrModule} from "ngx-toastr";
+import {SignupCourseComponent} from "./signup-course/signup-course";
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CoursesComponent,
-    EditCourseComponent
+    EditCourseComponent,
+    SignupCourseComponent
   ],
   imports: [
     BrowserModule,

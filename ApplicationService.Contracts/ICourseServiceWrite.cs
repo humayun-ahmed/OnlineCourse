@@ -8,7 +8,9 @@ namespace OnlineCourse.ApplicationService.Contracts
     {
         Task<CourseView> Add(AddCourseCommand command);
 
-        Task<CourseView> Edit(EditCourseCommand command);
+        Task Signup(SignupCourseCommand command);
+
+		Task<CourseView> Edit(EditCourseCommand command);
 
         Task Remove(RemoveCourseCommand command);
     }

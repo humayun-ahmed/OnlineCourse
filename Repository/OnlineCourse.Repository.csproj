@@ -51,12 +51,17 @@
     <Compile Include="Configuration.cs" />
     <Compile Include="DbInitializer.cs" />
     <Compile Include="DefaultData.cs" />
+    <Compile Include="EtConfiguration\ParticipantConfiguration.cs" />
     <Compile Include="EtConfiguration\CourseConfiguration.cs" />
     <Compile Include="IRepositoryOnlineCourse.cs" />
     <Compile Include="IRepositoryReadOnlineCourse.cs" />
     <Compile Include="Migrations\201905301702507_Initial.cs" />
     <Compile Include="Migrations\201905301702507_Initial.Designer.cs">
       <DependentUpon>201905301702507_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201906011000457_ParticipantMigration.cs" />
+    <Compile Include="Migrations\201906011000457_ParticipantMigration.Designer.cs">
+      <DependentUpon>201906011000457_ParticipantMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="OnlineCourseReadContext.cs" />
     <Compile Include="OnlineCourseContext.cs" />
@@ -103,6 +108,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201905301702507_Initial.resx">
       <DependentUpon>201905301702507_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201906011000457_ParticipantMigration.resx">
+      <DependentUpon>201906011000457_ParticipantMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

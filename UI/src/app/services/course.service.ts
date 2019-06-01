@@ -10,6 +10,7 @@ import {EditCourseCommand} from "../models/editCourseCommand";
 import {AddCourseCommand} from "../models/addCourseCommand";
 import {RemoveCourseCommand} from "../models/removeCourseCommand";
 import {HttpHeaders} from "@angular/common/http";
+import {SignupCourseCommand} from "../models/signupCourseCommand";
 
 // @Injectable({
 //   providedIn: 'root'
@@ -43,6 +44,10 @@ export class CourseService {
   addCourse(course: Course): Observable<any> {
     let command=new AddCourseCommand(course.name, course.maxParticipants, course.teacher);
     let url = `api/Course/Add`;
+    return this.http.post<any>(url, JSON.stringify(command));
+  }
+  signupCourse(command: SignupCourseCommand): Observable<any> {
+    let url = `api/Course/Signup`;
     return this.http.post<any>(url, JSON.stringify(command));
   }
 

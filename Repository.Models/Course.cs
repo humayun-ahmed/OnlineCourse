@@ -2,6 +2,8 @@
 
 namespace OnlineCourse.Repository.Models
 {
+	using System.Collections.Generic;
+
 	public class Course: IAggregateRoot
     {
         public DateTime LastUpdated { get; set; }
@@ -11,8 +13,10 @@ namespace OnlineCourse.Repository.Models
         public string Teacher { get; set; }
 
         public int MaxParticipants { get; set; }
+		
+		public ICollection<Participant> Participants { get; set; }
 
-        public Guid CourseGuid { get; set; }
+		public Guid CourseGuid { get; set; }
 
         public long CourseId { get; set; }
 

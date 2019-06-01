@@ -10,9 +10,14 @@
         public const string CourseAdd = "api/Course/Add";
 
         /// <summary>
-        /// The Course edit
+        /// The Course signup
         /// </summary>
-        public const string CourseEdit = "api/Course/Edit";
+        public const string CourseSignup = "api/Course/Signup";
+
+		/// <summary>
+		/// The Course edit
+		/// </summary>
+		public const string CourseEdit = "api/Course/Edit";
 
         /// <summary>
         /// The Course export

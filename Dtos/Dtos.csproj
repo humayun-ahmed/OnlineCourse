@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\SignupCourseCommand.cs" />
     <Compile Include="Commands\AddCourseCommand.cs" />
     <Compile Include="Commands\EditCourseCommand.cs" />
     <Compile Include="Commands\RemoveCourseCommand.cs" />

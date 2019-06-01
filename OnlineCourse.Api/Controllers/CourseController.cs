@@ -35,12 +35,27 @@ namespace OnlineCourse.Api.Controllers
         {
             return await this.courseServiceWrite.Add(command);
         }
+
         /// <summary>
-        /// Edits the specified command.
+        /// Adds the specified command.
         /// </summary>
         /// <param name="command">The command.</param>
         /// <returns></returns>
         [ValidateFilter]
+        [HttpPost]
+        [Route(ApiPaths.CourseSignup)]
+        public async Task Signup(SignupCourseCommand command)
+        {
+	        await this.courseServiceWrite.Signup(command);
+        }
+
+
+		/// <summary>
+		/// Edits the specified command.
+		/// </summary>
+		/// <param name="command">The command.</param>
+		/// <returns></returns>
+		[ValidateFilter]
         [HttpPut]
         [Route(ApiPaths.CourseEdit)]
         public async Task<CourseView> Edit(EditCourseCommand command)

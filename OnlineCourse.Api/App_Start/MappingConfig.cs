@@ -18,7 +18,9 @@ namespace OnlineCourse.Api
         {
             Mapper.CreateMap<AddCourseCommand, Course>();
             Mapper.CreateMap<EditCourseCommand, Course>();
-            Mapper.CreateMap<Course, CourseView>();
+            Mapper.CreateMap<SignupCourseCommand, Participant>();
+			Mapper.CreateMap<Course, CourseView>().ForMember(dest => dest.TotalParticipants,
+				opts => opts.MapFrom(src => src.Participants.Count)); 
 
         }
     }

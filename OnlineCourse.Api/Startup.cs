@@ -22,6 +22,10 @@ using Owin;
 
 namespace OnlineCourse.Api
 {
+	using System.Data.Entity;
+
+	using OnlineCourse.Repository;
+
 	/// <summary>
     ///     The startup.
     /// </summary>
@@ -54,8 +58,9 @@ namespace OnlineCourse.Api
             //SecurityConfig.RegisterRequestThrottling(app, bootstrapperWebApi.DependencyResolver);
             app.UseCors(Microsoft.Owin.Cors.CorsOptions.AllowAll);
 
+            app.UseOwinExceptionHandler();
 
-            app.UseDependencyInjectorMiddleware(bootstrapperWebApi.DependencyResolver);
+			app.UseDependencyInjectorMiddleware(bootstrapperWebApi.DependencyResolver);
 
             app.UseCorrelationIdInjector();
 
@@ -63,9 +68,9 @@ namespace OnlineCourse.Api
 
             app.UseOwinExceptionHandler<ApiExceptionConfiguration>();
 
-            //DbInitializer dbInitializer = bootstrapperWebApi.DependencyResolver.Resolve<DbInitializer>();
+            DbInitializer dbInitializer = bootstrapperWebApi.DependencyResolver.Resolve<DbInitializer>();
 
-            //Database.SetInitializer<OnlineCourseContext>(dbInitializer);
+            Database.SetInitializer<OnlineCourseContext>(dbInitializer);
             //AutoMapperConfig.RegisterMappings();
 
             this.ConfigurationExtension(config, bootstrapperWebApi.DependencyResolver);

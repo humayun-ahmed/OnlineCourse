@@ -34,11 +34,13 @@
 
     <div class="card-body">
       <h5 class="card-title">{{course.name}}</h5>
-      <p class="card-text">Max Participants: {{course.maxParticipants}}</p>
       <p class="card-text">Teacher: {{course.teacher}}</p>
+      <p class="card-text">Max Participants: {{course.maxParticipants}}</p>
+      <p class="card-text">Total Participants: {{course.totalParticipants}}</p>
       <h6 class="card-subtitle mb-2 text-muted small">Last update on {{course.lastUpdated | date: 'd MMMM, y'}}</h6>
       <a class="btn btn-success edit-btn" routerLink="/course/{{course.courseGuid}}">Edit</a>
       <a href="javascript:void(0)" class="btn btn-danger delete-btn" (click)="deleteCourse(course)">Delete</a>
+      <a class="btn btn-success edit-btn"  [style.visibility]="course.maxParticipants===course.totalParticipants?'hidden':''" routerLink="/course/signup/{{course.courseGuid}}">Signup</a>
 
     </div>
 
