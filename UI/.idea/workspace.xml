@@ -1,36 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8eef7519-1fdd-4fd0-9323-80e1dc4b0750" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/app/models/signupCourseCommand.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/signup-course/signup-course.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/signup-course/signup-course.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/signup-course/signup-course.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ApplicationService.Contracts/ICourseServiceWrite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ApplicationService.Contracts/ICourseServiceWrite.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ApplicationService/CourseServiceRead.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ApplicationService/CourseServiceRead.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ApplicationService/CourseServiceWrite.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../ApplicationService/CourseServiceWrite.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dtos.Validation/AddProductCommandSpecification.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dtos.Validation/Dtos.Validation.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../Dtos.Validation/Dtos.Validation.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dtos.Validation/EditProductCommandSpecification.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dtos.Validation/RemoveProductCommandSpecification.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dtos/Dtos.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../Dtos/Dtos.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Dtos/Views/CourseView.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Dtos/Views/CourseView.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OnlineCourse.Api/ApiPaths.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../OnlineCourse.Api/ApiPaths.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OnlineCourse.Api/App_Start/MappingConfig.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../OnlineCourse.Api/App_Start/MappingConfig.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OnlineCourse.Api/Controllers/CourseController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../OnlineCourse.Api/Controllers/CourseController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OnlineCourse.Api/NLog.config" beforeDir="false" afterPath="$PROJECT_DIR$/../OnlineCourse.Api/NLog.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../OnlineCourse.Api/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../OnlineCourse.Api/Startup.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Repository.Models/Course.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Repository.Models/Course.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Repository.Models/Repository.Models.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../Repository.Models/Repository.Models.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Repository/OnlineCourse.Repository.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../Repository/OnlineCourse.Repository.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.routing.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.routing.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/courses/courses.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/courses/courses.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/courses/courses.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/courses/courses.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/models/course.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/models/course.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/course.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/course.service.ts" afterDir="false" />
-    </list>
+    <list default="true" id="8eef7519-1fdd-4fd0-9323-80e1dc4b0750" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -334,16 +305,15 @@
       <workItem from="1559243128413" duration="5615000" />
       <workItem from="1559250855756" duration="313000" />
       <workItem from="1559251664386" duration="598000" />
-      <workItem from="1559377519471" duration="7214000" />
+      <workItem from="1559377519471" duration="7815000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18081000" />
+    <option name="totallyTimeSpent" value="18682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.498" visible="true" weight="0.20092532" />
       <window_info id="Structure" order="1" weight="0.25" />

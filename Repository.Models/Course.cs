@@ -4,7 +4,7 @@ namespace OnlineCourse.Repository.Models
 {
 	using System.Collections.Generic;
 
-	public class Course: IAggregateRoot
+	public class Course
     {
         public DateTime LastUpdated { get; set; }
 
